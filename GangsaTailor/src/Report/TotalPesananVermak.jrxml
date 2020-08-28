@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="883f860d-727b-4021-83ad-82f21dcd958d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select vermak.nopesan, vermak.tanggal, vermak.nama, payvermak.pembayaran from vermak, payvermak where vermak.stat is not null]]>
+	</queryString>
+	<field name="nopesan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pembayaran" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch">
+			<image>
+				<reportElement uuid="b1cfcff4-7923-4848-871b-5592edc822cb" x="725" y="0" width="77" height="102"/>
+				<imageExpression><![CDATA["https://drive.google.com/uc?export=view&id=1wtGZvikuTNIQShC4nd_UdUTFUtlClL3d"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="a74111f2-6732-426a-9c00-eaf1d1bd006f" style="Title" x="0" y="0" width="370" height="66" forecolor="#000000"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Gangsa Tailor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="187d44c9-af63-4bfd-925e-c22757a79104" x="-516" y="39" width="370" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20"/>
+				</textElement>
+				<text><![CDATA[Total Pesanan Tailor Design]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="187d44c9-af63-4bfd-925e-c22757a79104" x="-516" y="39" width="370" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20"/>
+				</textElement>
+				<text><![CDATA[Total Pesanan Tailor Design]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="187d44c9-af63-4bfd-925e-c22757a79104" x="-516" y="39" width="370" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total Pesanan Tailor Design]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="187d44c9-af63-4bfd-925e-c22757a79104" x="-516" y="39" width="370" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total Pesanan Tailor Design]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a74111f2-6732-426a-9c00-eaf1d1bd006f" style="Title" x="-516" y="-27" width="370" height="66" forecolor="#000000"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Gangsa Tailor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="187d44c9-af63-4bfd-925e-c22757a79104" x="-516" y="39" width="370" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total Pesanan Tailor Design]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a9d8448e-4758-405e-93e0-1482acb8515c" x="0" y="66" width="370" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="22" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total Pesanan Vermak]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a1368198-fc78-4a23-924a-960e6a9fb5ec" style="Column header" x="0" y="0" width="199" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[nopesan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77ec1b1e-ade1-4813-a2bb-6b6b369e9c55" style="Column header" x="199" y="0" width="199" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="57111be2-eed8-464d-940d-dc511e64e662" style="Column header" x="398" y="0" width="199" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0db60347-2e37-48d0-8933-7cc2294e20a9" style="Column header" x="597" y="0" width="199" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[pembayaran]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="db03b68f-c7cc-4a4e-a251-adca9ab9ab86" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="c63f1392-15a8-4250-991d-4248dcefb902" style="Detail" positionType="Float" x="0" y="0" width="199" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nopesan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="da1b1a42-976a-4a1c-aed8-7d65ab5372d2" style="Detail" positionType="Float" x="199" y="0" width="199" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="b7b31b10-7806-48ae-a8b1-491ce2aee754" style="Detail" positionType="Float" x="398" y="0" width="199" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="b51e583c-bc81-407b-9207-d090c98d514a" style="Detail" positionType="Float" x="597" y="0" width="199" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pembayaran}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="d7f15fa4-a641-498a-b133-c2e844e39d10" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="169" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="584" y="37" width="212" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="526" y="37" width="58" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="617" y="132" width="108" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Gangsa Tailor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="187d44c9-af63-4bfd-925e-c22757a79104" x="-516" y="39" width="370" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total Pesanan Tailor Design]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="187d44c9-af63-4bfd-925e-c22757a79104" x="-516" y="39" width="370" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total Pesanan Tailor Design]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
